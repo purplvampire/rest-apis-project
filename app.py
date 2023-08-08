@@ -27,6 +27,7 @@ def create_app(db_url=None):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False # 會降低速度
     app.config["PROPAGATE_EXCEPTIONS"] = True
     
+    
     db.init_app(app)
 
     # 移轉DB
