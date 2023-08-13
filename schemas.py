@@ -46,3 +46,6 @@ class UserSchema(Schema):
     id = fields.Int(dump_only=True) # 只能Return
     username = fields.Str(required=True)
     password = fields.Str(required=True, load_only=True) # 只能載入不能回傳
+
+class UserRegisterSchema(UserSchema):
+    email = fields.Str(required=True)
